@@ -1,9 +1,0 @@
-# To Make a Bit-Mask
-   take a variable 
-   int mask=0 and then just do:
-   mask=mask | (1<<n); // Take Logical OR of the mask with the number you want to make mask of you can use loop if you want
- e.g. 
-   int mask=0;
-   for(int i=0;i<n;i++){
-     mask=mask | (1<<i);
-   }
