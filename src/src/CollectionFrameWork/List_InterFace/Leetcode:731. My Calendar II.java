@@ -1,7 +1,6 @@
 #IMPORTANT:ALWAYS MAKE a NUMBER LINE FOR INTERVAL Pattern PROBLEM.
 // 1. Checking if two Intervals are Overlapped=Math.max(start1,start2)<Math.min(end1,end2).
 // 2. Finding the Overlapping Region=[Math.max(start1,start2)<Math.min(end1,end2)].
-
   
 class MyCalendarTwo {
     List<int[]> doubleOverlap;
