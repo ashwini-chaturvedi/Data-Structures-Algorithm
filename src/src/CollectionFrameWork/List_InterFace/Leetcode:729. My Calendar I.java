@@ -1,3 +1,8 @@
+#IMPORTANT:ALWAYS MAKE a NUMBER LINE FOR INTERVAL TYPE PROBLEM.
+// 1. Checking if two Intervals are Overlapped=Math.max(start1,start2)<Math.min(end1,end2).
+// 2. Finding the Overlapping Region=[Math.max(start1,start2)<Math.min(end1,end2)].
+
+
 //Store the events as a sorted list of intervals. 
 //If none of the events conflict, then the new event can be added.
 class MyCalendar {
