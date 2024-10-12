@@ -1,7 +1,6 @@
 //Approach:
 //1.Using a Heap to Store a pair of depart time and chair number given to that friend.
 //2.Using a Heap to Store the Least available seat that was vaccant by any departing friend.
-//
 class Pair {
     int depart;
     int chair;
