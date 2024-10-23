@@ -73,6 +73,5 @@ class Solution {
         return root;
     }
 }
-![image](https://github.com/user-attachments/assets/2600d862-215b-4251-8fcb-e31d5c07cef2)
 
 ```
