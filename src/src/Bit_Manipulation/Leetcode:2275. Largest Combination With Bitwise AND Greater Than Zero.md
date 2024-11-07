@@ -2,8 +2,9 @@
 # Approach:
    ## For the Result of Bit-wise AND of numbers to be Greater than zero any one of the bit of the binary representation of all the numbers should be set
                                             ### OR
-    ## All the numbers should have atleast one Set-Bit which is set in all the numbers to make the Bit-wise AND of the Numbers Greater than zero.
-    ## So we will check the every number for having a particular bit set or not and from there we will get the maximum number of candidates which have a particular bit set or not this will give us the Largest Combination having Bit-wise AND greater than Zero.
+                                            
+   ## All the numbers should have atleast one Set-Bit which is set in all the numbers to make the Bit-wise AND of the Numbers Greater than zero.
+   ## So we will check the every number for having a particular bit set or not and from there we will get the maximum number of candidates which have a particular bit set or not this will give us the Largest Combination having Bit-wise AND greater than Zero.
     
 ```java
 class Solution {
