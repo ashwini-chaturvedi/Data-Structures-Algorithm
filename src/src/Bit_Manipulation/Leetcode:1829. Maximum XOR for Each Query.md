@@ -2,7 +2,7 @@
   ## 1.Take XOR of all the Element of the Array.
   ## 2.Take the XOR with the Removed Element this will remove the contribution of that removedElement from the Overall XOR.
   ## 3.Flip the XOR Result and Store it in the Result Array.
-## Note:Why This Maximizes the XOR?
+## Note:Why This Flipping the xorRes Maximizes the XOR?
   ## 1.This bitwise inversion creates the largest possible number (within the bit length) that is completely different from xorRes.
   ## 2.This is because each bit position will contribute to the maximum value achievable for that bit length.
 
