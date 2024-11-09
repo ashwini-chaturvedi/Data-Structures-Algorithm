@@ -1,3 +1,4 @@
+```java
 package Stacks;
 
 import java.util.Stack;
@@ -34,3 +35,4 @@ public class ValidParenthesis {
         System.out.println(valid(str));
     }
 }
+```
