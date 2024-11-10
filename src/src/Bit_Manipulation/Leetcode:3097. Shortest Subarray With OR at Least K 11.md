@@ -1,5 +1,4 @@
 # longest/shortest + SubArray + with +condition == Sliding Window Technique
-
 ```java
 class Solution {
 
