@@ -6,7 +6,7 @@ class Solution {
     public void doOperation(int[] nums, boolean[] sieve, int idx) {
         for (int i = nums[idx]-1; i >= 0; i--) {
 
-            if (sieve[i]&& (idx == 0 ||nums[idx] - i > nums[idx - 1])) {//if idx is zero then it can be any number we don't have to worry about this one or check the Condition that the Subtraction operation gives result greater then the previous number because we want to have Strictly Increasing array.
+            if (sieve[i]&& (idx == 0 ||nums[idx] - i > nums[idx - 1])) {//if idx is zero then it can be any number we don't have to worry about this one or check the Condition that the Subtraction operation gives result that is Strictly greater then the previous number because we want to have Strictly Increasing array.
                 nums[idx] = nums[idx] - i;
                 break;
             } 
@@ -15,7 +15,7 @@ class Solution {
 
     public boolean isSorted(int[] nums) {
         for (int i = 1; i < nums.length; i++) {
-            if (nums[i] <= nums[i - 1]) return false;
+            if (nums[i] <= nums[i - 1]) return false; //Should not be less then or Equal to because we want Strictly Increasing Array.
         }
         return true;
     }
