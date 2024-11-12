@@ -1,7 +1,7 @@
-#Aprroach: 
-        ## Sort the Array on the Basis of Price(index:0) 
-        ## then do a Cummulative Gathering of the Previous Maximum Beauty 
-        ## then do a Binary Search for each Query.
+# Aproach: 
+## Sort the Array on the Basis of Price(index:0) 
+## then do a Cummulative Gathering of the Previous Maximum Beauty 
+## then do a Binary Search for each Query.
 ```java
 class Solution {
     public int binarySearch(int[][] items, int target) {
