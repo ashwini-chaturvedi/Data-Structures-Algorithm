@@ -1,3 +1,4 @@
+# Minimize the Maximum value Problem
 ```java
 class Solution {
     public boolean canEat(int []piles,int mid,int h){
