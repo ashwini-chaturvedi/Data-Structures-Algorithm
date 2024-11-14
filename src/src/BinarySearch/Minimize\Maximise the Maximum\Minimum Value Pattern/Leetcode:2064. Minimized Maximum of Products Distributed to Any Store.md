@@ -1,3 +1,4 @@
+# Minimize the Maximum value Problem
 ```java
 class Solution {
     public boolean isPossible(int[] quantities,int mid,int n){
