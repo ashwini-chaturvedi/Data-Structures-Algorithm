@@ -1,3 +1,10 @@
+# Must Do Dry Run to Understand
+```text
+    Input: arr = [1,2,3,10,4,2,3,5]
+    Output: 3
+    Explanation: The shortest subarray we can remove is [10,4,2] of length 3. The remaining elements after that will be [1,2,3,3,5] which are sorted.
+    Another correct solution is to remove the subarray [3,10,4].
+```
 ```java
 class Solution {
 
