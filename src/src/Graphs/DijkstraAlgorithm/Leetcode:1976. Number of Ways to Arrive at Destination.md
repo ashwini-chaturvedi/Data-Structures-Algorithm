@@ -1,4 +1,5 @@
 # Calculating the Number of ways to Reach the Node with same Shortest Distance...
+
 ```java
 class Pair {
     int u;
