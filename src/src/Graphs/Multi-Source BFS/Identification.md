@@ -21,32 +21,49 @@ Here are some common cues in problem descriptions that suggest Multi-Source BFS:
 A. **Propagation Behavior**
    -"Spread" is mentioned explicitly (e.g., rot, fire, infection, signal).
    -Multiple points or areas simultaneously affect the surroundings.
+   
 B. **Simultaneous Effect**
    -The problem specifies that events or actions occur in parallel.
    -Neighbors of a node or cell are affected simultaneously.
+   
 C. **Time or Distance**
    -The problem involves calculating the minimum time, steps, or levels required for something to happen (e.g., fully spread or reach all targets).
+   
 D. **Multiple Starting Points**
    -The initial state consists of multiple independent starting points (e.g., multiple rotten oranges, multiple fire sources).
+   
 ## Why BFS is Necessary?
 
 BFS is ideal for these problems because:
+
   A. **Simultaneous Propagation**: BFS processes nodes in a level-by-level manner, ensuring that all points at the same "distance" or "time" are processed together.
+  
   B. **Optimal Time or Distance**: BFS naturally computes the shortest time/distance since it explores all possible options simultaneously at each level.
+  
 **DFS** cannot handle these effectively because it explores deeply along one path before moving to another, failing to handle simultaneous propagation or level-wise updates.
 
 ## How to Apply Multi-Source BFS
+
 Here’s a step-by-step method to solve Multi-Source BFS problems:
 
    1. Step 1: Identify the Sources
+      
       -Find all the starting points (e.g., rotten oranges, fire sources, gates).
+      
    2. Step 2: Initialize a Queue
+      
       -Enqueue all the starting points with their initial state (e.g., time = 0).
-   3. Step 3: Use Level-Order Traversal
+      
+   5. Step 3: Use Level-Order Traversal
+      
       -Process the queue level by level, where each level represents a time unit or distance.
-   4. Step 4: Propagate to Neighbors
+      
+   3. Step 4: Propagate to Neighbors
+      
       -For each point in the current level, propagate to its neighbors (e.g., mark cells as affected or enqueue new points).
-   5. Step 5: Terminate When Complete
+      
+   4. Step 5: Terminate When Complete
+       
       -Stop when all cells are processed, or return the result (e.g., time, distance, or unreachable condition).
 
 ## Common Scenarios for Multi-Source BFS
