@@ -1,3 +1,4 @@
+# Rotate the box 90 degree using the relation rotatedBox[i][j] = box[m - 1 - j][i]
 ```java
 class Solution {
 
