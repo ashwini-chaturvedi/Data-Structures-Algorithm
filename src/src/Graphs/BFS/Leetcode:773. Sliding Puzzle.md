@@ -1,16 +1,27 @@
 # Approach:
 
 1.States are changing
+
 2.You have given Starting State(Source):board
+
 3.You have Ending State (target):[[1,2,3],[4,5,0]]
+
 4.State changes per level/move
+
 5.We are Dealing with levels for changing state
+
 6.We have to find the nearest level/Minimum moves=Shortest path
+
 7.Since Edges don't have weights so Disregard Dijkstra Algorithm
+
 8.Simple BFS will give the shortest path.
+
 9.But How to perform BFS on whole Matrix?
+
     To Perform BFS we would not add Whole Matrix into the Queue but we will cleverly change the Matrix to a String in that way it would be efficient to do BFS on String
+    
 10.How to Find the Adjacent Elements and Index to which zero is to be swapped?
+
     For that we will manually find the swapping positions of zero when zero is at different-different Indexes.we will make a Map of it when zero is at which index and can be swapped with which Indexes elements.
 
   ## Index of Zero  ->  Indexes it can Perform Swap.
