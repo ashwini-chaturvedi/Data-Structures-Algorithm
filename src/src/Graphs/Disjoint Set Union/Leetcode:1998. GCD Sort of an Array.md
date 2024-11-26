@@ -4,6 +4,7 @@
 # Why Prime Factors?
   >Any number can be broken down into its prime factors, and any number sharing at least one prime factor with another number is connected.
   >Using these prime factors, we group numbers together via union.
+
 ```java
 class Solution {
 
