@@ -3,7 +3,9 @@
 
 # Approach
   1.Map the i with i+1 as given in the Question.
+  
   2.Add the new Path between the nodes that are in "queries" array.
+  
   3.Do BFS to Find the Shortest Path between 0 to n-1.
 
 # Complexity
