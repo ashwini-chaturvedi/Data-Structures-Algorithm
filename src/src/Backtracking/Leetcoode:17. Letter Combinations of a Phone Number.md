@@ -10,8 +10,7 @@ class Solution {
         }
 
         int currIdx = digits.charAt(idx) - '0';//get the number that is pressed in phone
-        String str = map.get(currIdx);//String of Characters associated with that number
-
+        String str = map.get(currIdx);//String of Characters associated with that number later we will traverse this string and then try to make combination with the characters one by one
         for (int i = idx; i < digits.length(); i++) {
             for (int j = 0; j < str.length(); j++) {//Use all the characters to form the combinations
                 ans.append(str.charAt(j));
