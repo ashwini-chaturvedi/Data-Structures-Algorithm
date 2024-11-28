@@ -11,6 +11,9 @@ class Solution {
     public int largestCombination(int[] candidates) {
         int result=Integer.MIN_VALUE;
 
+        //24 bit tk check kro 
+        //zeroth bit uthao aur pure numbers me khojo,jiska jiska zeroth bit set ho tbb count bdhao aur fir atlast sbka maximum nikalo kyuki maximum jo bhi place ka bit set hoga wahi hmara answer hoga.
+
         for(int i=0;i<24;i++){//Candidates can Only have 24 bits 
             int IthSetBit=0;
             for(int j=0;j<candidates.length;j++){//Traversing Over the Candidates Array. 
