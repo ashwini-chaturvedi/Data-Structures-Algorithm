@@ -1,4 +1,4 @@
-we're using a stack to store indices rather than characters. Storing indices allows us to calculate the lengths of valid parentheses subsequences efficiently, which is essential for determining the longest valid sequence.
+# we're using a stack to store indices rather than characters. Storing indices allows us to calculate the lengths of valid parentheses subsequences efficiently, which is essential for determining the longest valid sequence.
 ```java
 class Solution {    
     public int longestValidParentheses(String s) {
