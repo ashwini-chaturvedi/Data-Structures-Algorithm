@@ -7,6 +7,8 @@
     Time Complexity:O(N^2)
     Space Complexity:O(N)
 */
+# With Comments
+```java
 class Solution {
     public String shortestPalindrome(String s) {
         String rev=new StringBuilder(s).reverse().toString();//Reverse the Original String
@@ -22,6 +24,23 @@ class Solution {
         return rev+s;
     }
 }
+```
+# With Out Comments
+```java
+class Solution {
+    public String shortestPalindrome(String s) {
+        String rev=new StringBuilder(s).reverse().toString();
+
+        for(int i=0;i<s.length();i++){
+
+            if(s.substring(0,s.length()-i).equals(rev.substring(i))){
+                return rev.substring(0,i)+s;
+            }
+        }
+        return rev+s;
+    }
+}
+```
 
 ----------------------------------------->Approach:2<-----------------------------------------------------------
 USING Knuth-Morris-Pratt (KMP) algorithm
