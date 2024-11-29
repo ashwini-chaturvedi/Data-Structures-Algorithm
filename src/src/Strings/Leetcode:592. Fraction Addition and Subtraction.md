@@ -30,14 +30,14 @@ class Solution {
                 i++;
             }
 
-            num=num*currDeno+denominator*currNum;
+            numerator=numerator*currDeno+denominator*currNum;
             denominator=denominator*currDeno;
            
         }
-        int gcd=gcd(Math.abs(num),denominator);//So that we can divide the numberator and denominator and make them in simpler form or Irreducible Form...
+        int gcd=gcd(Math.abs(numerator),denominator);//So that we can divide the numberator and denominator and make them in simpler form or Irreducible Form...
         numerator=numerator/gcd;
         denominator=denominator/gcd;
-        
+
         return numerator+"/"+denominator;
     }
     //Euclidean method to find gcd
