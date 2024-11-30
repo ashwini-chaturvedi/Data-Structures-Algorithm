@@ -6,8 +6,8 @@
 
 ---
 
-# How it works:
-## Arithmetic Right Shift (>>):
+## How it works:
+### Arithmetic Right Shift (>>):
 
 - It preserves the sign bit (most significant bit).
 
@@ -15,7 +15,7 @@
 
 - For negative numbers, it fills with 1 from the left (to maintain the sign).
 
-## Logical Right Shift (>>>) (specific to languages like Java):
+### Logical Right Shift (>>>) (specific to languages like Java):
 
 - It does not preserve the sign bit.
 - Always fills with 0 from the left, irrespective of the sign of the number.
