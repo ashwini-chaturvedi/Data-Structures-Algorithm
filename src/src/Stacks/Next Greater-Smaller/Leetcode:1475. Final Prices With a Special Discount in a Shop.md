@@ -3,7 +3,7 @@ class Solution {
 
     public int[] nextSmallerElement(int[] prices) {//Get the Next Smaller Element for the current Index
         int[] ans = new int[prices.length];
-        Stack<Integer> stack = new Stack<>();
+        Stack<Integer> stack = new Stack<>();//Monotonically Increasing Stack
 
 //Start from back to get the Next Smaller Element
         ans[prices.length - 1] = 0;
