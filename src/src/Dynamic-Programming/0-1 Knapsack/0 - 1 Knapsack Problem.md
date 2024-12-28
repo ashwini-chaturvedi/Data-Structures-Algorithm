@@ -1,42 +1,4 @@
 ```java
-//{ Driver Code Starts
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-public class GFG {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int testCases = Integer.parseInt(br.readLine());
-
-        while (testCases-- > 0) {
-            // Read capacity
-            int capacity = Integer.parseInt(br.readLine());
-
-            // Read values
-            String[] valInput = br.readLine().split(" ");
-            int[] val = new int[valInput.length];
-            for (int i = 0; i < valInput.length; i++) {
-                val[i] = Integer.parseInt(valInput[i]);
-            }
-
-            // Read weights
-            String[] wtInput = br.readLine().split(" ");
-            int[] wt = new int[wtInput.length];
-            for (int i = 0; i < wtInput.length; i++) {
-                wt[i] = Integer.parseInt(wtInput[i]);
-            }
-
-            // Call the knapSack function and print the result
-            System.out.println(Solution.knapSack(capacity, val, wt));
-            System.out.println("~");
-        }
-    }
-}
-
-// } Driver Code Ends
-
-
 class Solution {
     public static int Knapsack(int[]wt,int[]profit,int W,int n,int[][] memoiz){
         if(n==0 || W==0) return 0;//smallest valid Input will be Either the wt array or profit array becomes empty or the knapsack becomes full so that is why either W==0 or n==0
