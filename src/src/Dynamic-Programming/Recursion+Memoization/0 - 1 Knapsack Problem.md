@@ -8,9 +8,9 @@ class Solution {
             return memoiz[n][W];
         }
         if(wt[n-1]<=W){/*When the Weight of Item is less equal to the Allowed maximum weight in knapsack 
-        //then you have 2 options
-        //1.To Include the Current ELement
-        //2.To Exclude the Current ELement
+        then you have 2 options
+        1.To Include the Current ELement
+        2.To Exclude the Current ELement
         
         
         Either Include the Current element at n-1 or Exclude it*/
