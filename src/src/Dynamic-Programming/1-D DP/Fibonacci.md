@@ -1,3 +1,4 @@
+# Top-Down(Recursion+Memoization)
 ```java
 import java.util.*;
 
@@ -41,6 +42,29 @@ public class DP {
         for (int i = 0; i <= n; i++) {
             System.out.print(fibonacci(i, dp) + (i < n ? ", " : "\n"));
         }
+    }
+}
+
+```
+# Bottom Up
+```java
+class Solution {
+
+    public int fib(int n) {
+        if (n == 0) return 0;//Edge case
+
+        int[] dp = new int[n + 1];//dp Array for Bottom-Up
+
+        //Initialization
+        dp[0] = 0;
+        dp[1] = 1;
+
+        //Now Start Moving from i==2
+        for (int i = 2; i < n + 1; i++) {
+            dp[i] = dp[i - 1] + dp[i - 2];
+        }
+
+        return dp[n];
     }
 }
 
