@@ -7,14 +7,14 @@ class Solution {
 
         if ( dp[idx+1][prevIdx+1] != -1) return dp[idx+1][prevIdx+1];
 
-        int exclude = LIS(nums, idx + 1, prevIdx, dp);
+        int exclude = LIS(nums, idx + 1, prevIdx, dp);//exclude the element at this index
 
         int include = 0;
-        if (prevIdx == -1 || nums[idx] > nums[prevIdx]) {
-            include = 1 + LIS(nums, idx + 1, idx, dp);
+        if (prevIdx == -1 || nums[idx] > nums[prevIdx]) {//if the element is in Increasing Order.
+            include = 1 + LIS(nums, idx + 1, idx, dp);//take it and Increase its count.
         }
 
-        return dp[idx+1][prevIdx+1] = Math.max(include, exclude);
+        return dp[idx+1][prevIdx+1] = Math.max(include, exclude);//maximum count after including or excluding the current Element.
     }
 
     public int lengthOfLIS(int[] nums) {
