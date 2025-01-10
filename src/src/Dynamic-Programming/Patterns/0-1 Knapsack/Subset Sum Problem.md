@@ -11,7 +11,7 @@ class Solution {
     2. Now we will use Top-Down because we have to pick the elements whose sum equals to Target
         and the Index of the array & target is changing for Every Sub problem.
     3. Initialization:When Index is 0 means the array is empty then we cannot make any sum from an Empty Array. 
-    4. But when the target is 0 we can make sum zero so true 
+    4. But when the target is 0 we can make sum zero so true because every array has an Empty Subset/Null Subset
     5. Now Either Chose the Element to be Part of the Sum or don't choose it.
     6. Bit-wise OR checks if either by including or by excluding do the target sum is Achived
     5. Atlast,check the last cell of the Matrix...
