@@ -1,6 +1,5 @@
 ```java
 class Solution {
-
     public boolean doesValidArrayExist(int[] derived) {
         int xor = 0;
         /*Understand that from the original element, we are using each element twice to construct the derived array*/
