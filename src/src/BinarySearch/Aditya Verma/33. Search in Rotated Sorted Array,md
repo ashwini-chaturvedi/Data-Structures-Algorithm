@@ -1,0 +1,29 @@
+```java
+class Solution {
+    public int search(int[] nums, int target) {
+        int low=0;
+        int high=nums.length-1;
+
+        while(low<=high){ 
+            int mid=low+(high-low)/2;
+
+            if(nums[mid]==target){
+                return mid;
+            }else if(nums[low]<=nums[mid] ){//if Left Side of the array from mid is Sorted
+                if(nums[low]<=target && nums[mid]>=target){//if Target Lies between the low & mid then go towards the left side so,
+                    high=mid-1;
+                }else{//else if target don't lie in this Interval then move to right side;
+                    low=mid+1;
+                }
+            }else {//if the right side is Sorted than    
+                if(nums[mid]<=target && target<=nums[high]){
+                    low=mid+1;
+                }else{
+                    high=mid-1;
+                }                                  
+            }
+        }
+        return -1;
+    }
+}
+```
