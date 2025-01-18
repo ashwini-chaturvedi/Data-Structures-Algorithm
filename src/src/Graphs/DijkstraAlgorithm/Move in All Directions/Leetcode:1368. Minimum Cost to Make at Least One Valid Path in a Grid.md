@@ -1,4 +1,62 @@
+# Without Comments & Using Array in PriorityQueue
+```java
+class Solution {
 
+    public boolean isValid(int[][] grid, int i, int j) {
+        return i >= 0 && i < grid.length && j >= 0 && j < grid[0].length;
+    }
+
+    public int minCost(int[][] grid) {
+        int m = grid.length;
+        int n = grid[0].length;
+
+        int[][] Directions = {//Maintain the Sequece of movement same as that given in Question is Right->Left->Down->Up
+            { 0, 1 }, //Move Right=1
+            { 0, -1 }, //Move Left=2
+            { 1, 0 }, //Move Down=3
+            { -1, 0 } //Move Up=4
+        };
+
+        int[][] costs = new int[m][n];
+
+        for (int[] cost : costs) {
+            Arrays.fill(cost, Integer.MAX_VALUE);
+        }
+        costs[0][0] = 0;
+
+        PriorityQueue<int[]> minHeap = new PriorityQueue<>((a, b) -> a[2] - b[2]);
+        minHeap.add(new int[] { 0, 0, 0 });
+
+        while (!minHeap.isEmpty()) {
+            int[] Current = minHeap.poll();
+            int currRow = Current[0];
+            int currCol = Current[1];
+            int currCost = Current[2];
+
+            if (currRow == m - 1 && currCol == n - 1) return currCost;
+
+            if (costs[currRow][currCol] < currCost) continue;
+
+            for (int currDirection = 1; currDirection <= 4; currDirection++) {
+                int newRow = currRow + Directions[currDirection - 1][0];
+                int newCol = currCol + Directions[currDirection - 1][1];
+
+                if (isValid(grid, newRow, newCol)) {
+                    int newCost = currCost + (grid[currRow][currCol] == currDirection ? 0 : 1);
+
+                    if (newCost < costs[newRow][newCol]) {
+                        costs[newRow][newCol] = newCost;
+                        minHeap.add(new int[] { newRow, newCol, newCost });
+                    }
+                }
+            }
+        }
+        return -1;
+    }
+}
+
+```
+# With Comments & Using Class Type in PriorityQueue
 ```java
 class Tuple {
     int row;
