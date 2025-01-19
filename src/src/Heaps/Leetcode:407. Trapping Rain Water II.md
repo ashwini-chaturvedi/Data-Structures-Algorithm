@@ -1,7 +1,7 @@
 # Question
-```java
+
 Given an m x n integer matrix heightMap representing the height of each unit cell in a 2D elevation map, return the volume of water it can trap after raining.
-```
+
 ![Water Trapping Illustration](https://assets.leetcode.com/uploads/2021/04/08/trap1-3d.jpg "Water Trapping Example")
 
 ```java
