@@ -23,6 +23,69 @@ Output: [[1,1,0],[0,1,1],[1,2,2]]
 Explanation: A height of 2 is the maximum possible height of any assignment.
 Any height assignment that has a maximum height of 2 while still meeting the rules will also be accepted.
 
+#DFS TLE
+```java
+class Solution {
+
+    // Function to check if the given cell (i, j) is within the grid boundaries
+    public boolean isValid(int[][] grid, int i, int j) {
+        return i >= 0 && i < grid.length && j >= 0 && j < grid[0].length;
+    }
+
+    // Depth First Search (DFS) function to calculate the minimum distance to water
+    public void DFS(int[][] isWater, int i, int j, int[][] res, boolean[][] isVisited, int[][] directions) {
+        // Iterate over all possible 4 directions (up, down, left, right)
+        for (int[] dir : directions) {
+            int newI = i + dir[0]; // Calculate new row index
+            int newJ = j + dir[1]; // Calculate new column index
+
+            // Check if the new cell is valid and has not been visited yet
+            if (isValid(isWater, newI, newJ) && !isVisited[newI][newJ]) {
+                // If the current path offers a shorter distance, update the result
+                if (res[newI][newJ] > res[i][j] + 1) {
+                    res[newI][newJ] = res[i][j] + 1; // Update the distance
+                    isVisited[newI][newJ] = true;    // Mark the cell as visited
+                    DFS(isWater, newI, newJ, res, isVisited, directions); // Recurse to explore further
+                    isVisited[newI][newJ] = false; // Backtrack by marking the cell as unvisited
+                }
+            }
+        }
+    }
+
+    // Main function to compute the height of the highest peak for the grid
+    public int[][] highestPeak(int[][] isWater) {
+        int m = isWater.length;    // Number of rows in the grid
+        int n = isWater[0].length; // Number of columns in the grid
+        int[][] directions = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 } }; // Possible movement directions
+
+        // Initialize the result grid with Integer.MAX_VALUE (indicating unvisited)
+        int[][] res = new int[m][n];
+        for (int[] r : res) {
+            Arrays.fill(r, Integer.MAX_VALUE);
+        }
+
+        // Boolean array to track visited cells during DFS
+        boolean[][] visited = new boolean[m][n];
+
+        // Loop through all cells in the grid
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                // If the cell represents water (value 1), initialize its distance
+                if (isWater[i][j] == 1) {
+                    visited[i][j] = true; // Mark the cell as visited
+                    res[i][j] = 0;       // Water cells have height 0
+                    DFS(isWater, i, j, res, visited, directions); // Perform DFS from this cell
+                }
+            }
+        }
+
+        return res; // Return the final result grid
+    }
+}
+
+```
+
+# BFS
 ```java
 class Solution {
 
