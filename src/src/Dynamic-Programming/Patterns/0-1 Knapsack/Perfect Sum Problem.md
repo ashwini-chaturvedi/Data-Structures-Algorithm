@@ -17,7 +17,7 @@ class Solution {
             }
         }
         for(int i=1;i<nums.length+1;i++){
-            for(int j=0;j<target+1;j++){/*here we will start from 0 and not 2 because according to the constraint 
+            for(int j=0;j<target+1;j++){/*here we will start from 0 and not 1 because according to the constraint 
             there might be 0 as element so we have to manipulate the Initialization row column also to get the result as the 
             occurence of 0 will be 2 after 5 index in array because at index 4 zero is present*/
                 
