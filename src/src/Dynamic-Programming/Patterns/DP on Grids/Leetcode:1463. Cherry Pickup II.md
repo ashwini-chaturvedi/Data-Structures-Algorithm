@@ -15,12 +15,19 @@ Both robots should reach the bottom row in grid.
 
 Example 1:
 ![image](https://assets.leetcode.com/uploads/2020/04/23/sample_2_1802.png)
+
 Input: grid = [[1,0,0,0,0,0,1],[2,0,0,0,0,3,0],[2,0,9,0,0,0,0],[0,3,0,5,4,0,0],[1,0,2,3,0,0,6]]
+
 Output: 28
+
 Explanation: Path of robot #1 and #2 are described in color green and blue respectively.
+
 Cherries taken by Robot #1, (1 + 9 + 5 + 2) = 17.
+
 Cherries taken by Robot #2, (1 + 3 + 4 + 3) = 11.
+
 Total of cherries: 17 + 11 = 28.
+
 ```java
 class Solution {
 
