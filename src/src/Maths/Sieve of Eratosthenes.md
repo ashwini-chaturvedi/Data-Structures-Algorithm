@@ -6,6 +6,7 @@ public boolean isPrime(int num,int n){
 
         //Now Applying Algorithm
         Arrays.fill(sieve,true);//First Mark all the Indexes as True
+        sieve[0] = sieve[1] = false; // 0 and 1 are not prime
 
         for(int i=2;i<=Math.sqrt(n);i++){//Start Traversing From index 2 to the Square Root of 'n' because after that the value will go beyond 'n'
             if(sieve[i]){//if the Index is true that means it is a Prime Number.
@@ -27,6 +28,7 @@ public boolean isPrime(int num,int n){
         boolean[] sieve=new boolean[n+1];
 
         Arrays.fill(sieve,true);
+        sieve[0] = sieve[1] = false;
 
         for(int i=2;i<=Math.sqrt(n);i++){
             if(sieve[i]){
