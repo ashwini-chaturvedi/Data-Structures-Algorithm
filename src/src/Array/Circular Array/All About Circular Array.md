@@ -1,3 +1,7 @@
+# Trick
+When there is Circular Array in the Question
+    1.Append the array 2nd time into the existing array means 1st array me 2nd time append krdo taaki rotation na krna pde circular array types*/
+
 # 1. Forward Traversal (Clockwise)
 ```text
 In forward traversal, we move from a starting index start and proceed clockwise, wrapping around the array
