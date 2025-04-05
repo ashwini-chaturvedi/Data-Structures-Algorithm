@@ -6,6 +6,8 @@ A node is called the deepest if it has the largest depth possible among any node
 
 The subtree of a node is a tree consisting of that node, plus the set of all descendants of that node.
 
+
+![img](https://s3-lc-upload.s3.amazonaws.com/uploads/2018/07/01/sketch1.png)
  
 
 Example 1:
