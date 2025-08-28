@@ -5,17 +5,21 @@
   stack
   4. if current character is an Closing Parenthesis start popping 
   elements from the stack and add it to the Answer String
-  3. if we encounter an Operator 
+  3. if we encounter an Operator
+  
           priority(ch)<=priority(st.peek())
+     
       a) if operator on top of the stack is of lower priority 
       than current operator & not an Opening paranethesis then 
       push the current operator into the stack
+     
       b) if operator on top of the stack is of higher or Equal priority 
       than current operator & not an Opening paranethesis 
       then start popping elements from the stack and adding it to 
       the Answer String until you get a lower priority operator 
       or opening bracket then push the current Operator into the stack.
-  4. At last the whatever is left into the stack pop it and add it to 
+     
+  5. At last the whatever is left into the stack pop it and add it to 
   the Answer String.
 
 */
