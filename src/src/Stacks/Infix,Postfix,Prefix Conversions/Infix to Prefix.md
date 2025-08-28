@@ -1,8 +1,12 @@
 ## Theory:
   #IMPORTANT STEPS 
-      i) Reverse the Infix Arrangement
-      ii) traverse the Reverse String and change '('->')' & ')'->'('.
-      ii) Do Infix to Postfix Conversion with some Control
+  
+      i) Reverse the Infix Arrangement.  
+      
+      ii) traverse the Reverse String and change '('->')' & ')'->'('.    
+      
+      ii) Do Infix to Postfix Conversion with some Control     
+      
       iii) Reverse the postfix Answer
       
   1. Reverse the String 
