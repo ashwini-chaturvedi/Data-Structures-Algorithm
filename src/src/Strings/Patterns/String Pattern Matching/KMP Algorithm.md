@@ -1,4 +1,53 @@
 ```java
+1.Book Implementation
+class Solution {
+    public int[] prefixTable(String needle){
+        int[] prefix=new int[needle.length()];
+        int i=1;
+        int j=0;
+        prefix[0]=0;
+
+        while(i<needle.length()){
+            if(needle.charAt(i)==needle.charAt(j)){
+                prefix[i]=j+1;
+                i++;
+                j++;
+            }else if(j>0){
+                j=prefix[j-1];
+            }else{
+                prefix[i]=0;
+                i++;
+            }
+        }
+
+        return prefix;
+
+    }
+    public int strStr(String haystack, String needle) {
+        int i=0;
+        int j=0;
+        int[] prefixTable=prefixTable(needle);
+
+        while(i<haystack.length()){
+            if(haystack.charAt(i)==needle.charAt(j)){
+                if(j==needle.length()-1){
+                    return i-j;
+                }else{
+                    i++;
+                    j++;
+                }
+            }else if(j>0){
+                j=prefixTable[j-1];
+            }else{
+                i++;
+            }
+        }
+
+        return -1;
+    }
+}
+
+2.Code Story with Mik
 class Solution {
     public int[] findLPS(String pattern){
         int[] LPS=new int[pattern.length()];
