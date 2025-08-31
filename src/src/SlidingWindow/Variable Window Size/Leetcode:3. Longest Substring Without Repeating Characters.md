@@ -15,8 +15,9 @@ class Solution {
                 i++;
                               
             }
+            maxLen=Math.max(maxLen,j-i+1);//Calculating the length after removing the duplicate Item
             set.add(s.charAt(j));
-            maxLen=Math.max(maxLen,j-i+1);  
+            
             j++;
         }
 
