@@ -1,4 +1,4 @@
-!(image)[https://assets.leetcode.com/uploads/2021/02/19/symtree1.jpg]
+!(https://assets.leetcode.com/uploads/2021/02/19/symtree1.jpg)[https://assets.leetcode.com/uploads/2021/02/19/symtree1.jpg]
 ```java
 class Solution {
     public boolean Symmetry(TreeNode left,TreeNode right){
