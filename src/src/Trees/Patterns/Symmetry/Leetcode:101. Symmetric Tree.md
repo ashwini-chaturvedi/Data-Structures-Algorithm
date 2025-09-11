@@ -6,7 +6,7 @@ class Solution {
 
         if(left.val !=right.val) return false;
 
-
+⚠️Important: The way of movement to left of left and right of right & right of left and left of right
         return Symmetry(left.left,right.right) && Symmetry(left.right,right.left);
     }
     public boolean isSymmetric(TreeNode root) {
