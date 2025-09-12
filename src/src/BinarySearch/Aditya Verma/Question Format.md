@@ -1,17 +1,30 @@
 # Question List
-1.Binary Search Implementation:[](https://leetcode.com/problems/binary-search/description/?envType=problem-list-v2&envId=vrv1cwdi)
-2.Order Agnostic Binary Search:[]()
-3.First and Last Occurence of an Element in Sorted Array:[](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/)
-4.Count of an Element in Sorted Array:[](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/)
-5.Number of times the array is rotated:[]()
+1.Binary Search Implementation:[Link](https://leetcode.com/problems/binary-search/description/?envType=problem-list-v2&envId=vrv1cwdi)
+
+2.Order Agnostic Binary Search:[Link]()
+
+3.First and Last Occurence of an Element in Sorted Array:[Link](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/)
+
+4.Count of an Element in Sorted Array:[Link](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/)
+
+5.Number of times the array is rotated:[Link]()
+
 6.Find the element in Rotated Sorted Array:[]()
+
 7.Searching in a Nearly Sorted Array:[]()
+
 8.Floor or Ceil Value of an Element:[]()
+
 9.Next Letter:[]()
+
 10.Index of last 1 in Sorted Array:[]()
+
 11.Find the Position of an Element in a Infinite Sorted Array:[]()
+
 12.Minimum Diff Element in a Sorted Array:[]()
+
 13.Bitonic Array max Element:[]()
+
 14.Search in a Bitonic Array:[]()
 15.Search in row or column wise in sorted matrix:[]()
 16.Find Element in Sorted Array that appears Once:[]()
