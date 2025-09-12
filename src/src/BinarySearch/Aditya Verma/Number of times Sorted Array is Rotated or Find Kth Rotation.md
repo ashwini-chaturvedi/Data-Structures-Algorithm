@@ -10,7 +10,8 @@ class Solution {
         while(low<=high){
             if(arr[low]<=arr[high]) return low;
             int mid=low+(high-low)/2;
-            
+
+//for checking left and right value of the current index but it can be circular so using the cicular formulas
             int leftIdxToMid=(mid-1+n)%n;//to avoid overflow/out of bound
             int rightIdxToMid=(mid+1)%n;//to avoid overflow/out of bound
             
