@@ -11,9 +11,9 @@ class Solution {
            
            if(arr[mid]==target){
                ans= mid;
-               if(isFirst){
+               if(isFirst){//if trying to find first occurence move to left side by making high smaller
                    high=mid-1;
-               }else{
+               }else{//if last occurence move to right by making low bigger...
                    low=mid+1;
                }
            }else if(arr[mid]<target){
