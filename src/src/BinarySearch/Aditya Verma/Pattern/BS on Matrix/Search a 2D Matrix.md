@@ -14,38 +14,46 @@ Example 1:
 Input: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3
 
 Output: true
+
+Intuition:
+
+When flattening the 2d matrix it is map in this way 
+
+we are flattening it by column and after every elements equal to col the next row elements start so we will divide it with n or number of cols...
+
+Division / n → “how many full rows are done already”
+
+Modulus % n → “how far inside the current row we are”
+
+int row = mid / n; //row index (quotient)
+
+int col = mid % n; //column index (remainder)
+
 ```java
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
-        // Get the number of rows and columns in the matrix
-        int m = matrix.length;       // Number of rows
-        int n = matrix[0].length;    // Number of columns
+        int row=matrix.length;
+        int col=matrix[0].length;
 
-        // Start from the top-right corner of the matrix
-        int i = 0;      // Row index
-        int j = n - 1;  // Column index
+        int low=0;
+        int high=row*col-1;
 
-        // Traverse the matrix until we go out of bounds
-        while (i >= 0 && i < m && j >= 0 && j < n) {
+        while(low<=high){
+            int mid=low+(high-low)/2;
 
-            // Case 1: If the current element matches the target, return true
-            if (matrix[i][j] == target) {
+            int currRow=mid/col;
+            int currCol=mid%col;
+
+            if(matrix[currRow][currCol]==target){
                 return true;
-            } 
-            // Case 2: If the current element is greater than the target, move left
-            // (decrease the column index)
-            else if (matrix[i][j] > target) {
-                j--;
-            } 
-            // Case 3: If the current element is less than the target, move down
-            // (increase the row index)
-            else if (matrix[i][j] < target) {
-                i++;
+            }else if(matrix[currRow][currCol]>target){
+                high=mid-1;
+            }else{
+                low=mid+1;
             }
         }
 
-        // If we exit the loop without finding the target, return false
-        return false;
+        return false;   
     }
 }
 
