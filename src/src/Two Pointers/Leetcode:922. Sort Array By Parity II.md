@@ -1,4 +1,5 @@
 ```java
+
 class Solution {
     public int[] sortArrayByParityII(int[] nums) {
         int i = 0; // even index
