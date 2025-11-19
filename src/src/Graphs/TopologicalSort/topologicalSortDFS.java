@@ -43,7 +43,7 @@ public class topologicalSortDFS {
         for(int i=0;i<6;i++){
             if(!visited.contains(i)){
                 Tsort(adjList,i,visited,st);
-            }
+            } 
         }
         List<Integer>res=new ArrayList<>();
         while(!st.isEmpty()){
