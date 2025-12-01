@@ -9,13 +9,14 @@ According to this Algorithm "It will help to find maximum Subarray sum in any ar
 4) Maximum of current subarray sum and the previously found one.
 5) return maximumValue we have found till now.
 
-Examples:
+Example 1:
 
-Input: arr[] = [2, 3, -8, 7, -1, 2, 3]
+Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
 
-Output: 11
+Output: 6
 
-Explanation: The subarray [7, -1, 2, 3] has the largest sum 11.
+Explanation: The subarray [4,-1,2,1] has the largest sum 6.
+
 
 # Blueprint Code
 ```java
