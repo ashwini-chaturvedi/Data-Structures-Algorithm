@@ -10,7 +10,7 @@ For example, the average of four elements 2, 3, 1, and 5 is (2 + 3 + 1 + 5) / 4 
  
 
 Example 1:
-[](https://assets.leetcode.com/uploads/2021/11/07/eg1.png)
+[img](https://assets.leetcode.com/uploads/2021/11/07/eg1.png)
 
 Input: nums = [7,4,3,9,1,8,5,2,6], k = 3
 
