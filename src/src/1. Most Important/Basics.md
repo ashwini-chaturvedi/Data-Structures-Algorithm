@@ -1,7 +1,112 @@
 # Array Optimization Techniques
 
-## Whenever thinking of optimizing Problems of Array Mainly 4 patterns are main:
+## Whenever thinking of optimizing Array Problems, these 4 patterns should be checked first:
 
+# How to Identify the Correct Pattern
+
+Whenever you read an Array/String problem, ask these questions in order:
+
+### 1. Is the problem asking for a Pair / Triplet?
+
+Examples:
+
+```text
+Two Sum
+3Sum
+Closest Pair
+```
+
+→ Think **Two Pointers**
+
+---
+
+### 2. Is the problem asking for:
+
+```text
+Longest
+Shortest
+Maximum Length
+Minimum Length
+```
+
+of a:
+
+```text
+Substring
+Subarray
+Continuous Segment
+```
+
+→ Think **Sliding Window**
+
+---
+
+### 3. Is the problem asking for:
+
+```text
+Range Sum
+Count Subarrays
+Subarray Sum = K
+Sum Divisible By K
+```
+
+→ Think **Prefix Sum**
+
+---
+
+### 4. For every index, do I need information from:
+
+```text
+Left Side
++
+Right Side
+```
+
+Examples:
+
+```text
+Count N before i
+Count Y after i
+Left Sum
+Right Sum
+Product on Left
+Product on Right
+```
+
+→ Think **Prefix/Suffix Preprocessing**
+
+Examples:
+
+- LC 2483
+- LC 238
+- LC 724
+- LC 1991
+
+---
+
+### 5. Is the problem asking for:
+
+```text
+Maximum Sum
+Maximum Profit
+Maximum Score
+Largest Gain
+```
+
+on a continuous segment?
+
+→ Think **Kadane's Algorithm**
+
+---
+
+# Golden Rule
+
+- Pair / Triplet → Two Pointers
+- Longest / Shortest Window → Sliding Window
+- Count / Sum of Subarrays → Prefix Sum
+- Left Information + Right Information → Prefix/Suffix
+- Maximum Continuous Sum → Kadane
+  
 ---
 
 # 1. Two Pointers Technique
