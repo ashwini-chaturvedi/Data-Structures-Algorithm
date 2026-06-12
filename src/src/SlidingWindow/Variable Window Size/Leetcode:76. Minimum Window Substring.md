@@ -12,6 +12,58 @@ Output: "BANC"
 
 Explanation: The minimum window substring "BANC" includes 'A', 'B', and 'C' from string t.
 
+
+```java
+class Solution {
+
+    public boolean isAllZeroORLesser(Map<Character, Integer> map) {
+        for (var num : map.entrySet()) {
+            if (num.getValue() > 0) return false;
+        }
+
+        return true;
+    }
+
+    public String minWindow(String s, String t) {
+        if (s.length() < t.length()) return "";
+
+        Map<Character, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < t.length(); i++) {
+            char ch = t.charAt(i);
+            map.put(ch, map.getOrDefault(ch, 0) + 1);
+        }
+
+        int i = 0;
+        int j = 0;
+        String ans = "";
+        //Make the Frequency Array Here and check the frequency of t and basis of that don't have to call the method
+
+        while (j < s.length()) {
+            char ch = s.charAt(j);
+
+            map.put(ch, map.getOrDefault(ch, 0) - 1);
+
+            while (i <= j && (j - i + 1) >= t.length() && isAllZeroORLesser(map)) {
+                if (ans.equals("") || ans.length() > s.substring(i, j + 1).length()) {
+                    ans = s.substring(i, j + 1);
+                }
+                char ch1 = s.charAt(i);
+
+                map.put(ch1, map.getOrDefault(ch1, 0) + 1);
+
+                i++;
+            }
+            j++;
+        }
+
+        return ans;
+    }
+}
+
+```
+
+
 ```java
 class Solution {
     public String minWindow(String s, String t) {
