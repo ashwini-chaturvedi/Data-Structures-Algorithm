@@ -1,4 +1,4 @@
-```java
+
 # Identifying Monotonic Stack Problems
 
 Monotonic stack problems typically involve array or sequence processing tasks where you need to find relationships between elements, such as the **next greater element**, **next smaller element**, or spans of elements satisfying a condition.
