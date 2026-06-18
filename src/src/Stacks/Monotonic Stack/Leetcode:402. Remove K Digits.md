@@ -1,6 +1,55 @@
  # Why Increasing Monotonic Stack?
    1.The Relative Order of the characters should also be maintained 
+   
    2.we want to have smallest possible integer that is why Increasing Monotonic stack
+
+```java
+class Solution {
+
+    public String removeKdigits(String num, int k) {
+        if (num.length() == k) return "0";
+        Stack<Character> st = new Stack<>();
+        st.push(num.charAt(0));
+        int i = 1;
+        for (; i < num.length(); i++) {
+            char ch = num.charAt(i);
+            while (!st.isEmpty() && (st.peek() - '0') > (ch - '0') && k > 0) {
+                st.pop();
+                k--;
+            }
+       
+            st.push(ch);
+        }
+
+
+        StringBuilder sb = new StringBuilder();
+        while (!st.isEmpty()) {
+            sb.insert(0, st.pop());
+        }
+        if (k > 0) {
+            sb = new StringBuilder(sb.substring(0, sb.length() - k));
+        }
+
+        StringBuilder s = new StringBuilder();
+        boolean isFound = false;
+        for (char ch : sb.toString().toCharArray()) {
+            if ((ch - '0') != 0) {
+                s.append(ch);
+                isFound = true;
+            } else if (isFound) {
+                s.append(ch);
+            } else {
+                continue;
+            }
+        }
+
+        
+
+        return s.toString().isEmpty() ? "0" : s.toString();
+    }
+}
+
+```
  ```java
 class Solution {
     //push the values in Increasing order...
