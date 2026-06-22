@@ -1,4 +1,5 @@
 ```java
+
 class Solution {
 
     public void swap(List<Integer> list, int i, int j) {
