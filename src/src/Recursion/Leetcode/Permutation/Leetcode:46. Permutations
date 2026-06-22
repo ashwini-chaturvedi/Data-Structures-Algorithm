@@ -1,0 +1,37 @@
+```java
+class Solution {
+
+    public void swap(int[] nums, int i, int j) {
+        int temp = nums[i];
+        nums[i]=nums[j];
+        nums[j]=temp;
+    }
+
+    public void solve(int[] nums, List<List<Integer>> list, int idx) {
+        if (idx == nums.length) {
+            List<Integer> ans = new ArrayList<>();
+            for (int num : nums) {
+                ans.add(num);
+            }
+            list.add(new ArrayList<>(ans));
+            return;
+        }
+
+        for (int i = idx; i < nums.length; i++) {
+            swap(nums, i, idx);
+            solve(nums, list, idx + 1);
+            swap(nums, i, idx);
+        }
+        return;
+    }
+
+    public List<List<Integer>> permute(int[] nums) {
+        List<List<Integer>> list = new ArrayList<>();
+
+        solve(nums, list, 0);
+
+        return list;
+    }
+}
+
+```
