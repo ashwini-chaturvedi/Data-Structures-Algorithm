@@ -26,6 +26,44 @@ Input: n = 3, k = 9
 Output: "cab"
 Explanation: There are 12 different happy string of length 3 ["aba", "abc", "aca", "acb", "bab", "bac", "bca", "bcb", "cab", "cac", "cba", "cbc"]. You will find the 9th string = "cab"
 
+# Solution:1
+```java
+class Solution {
+    
+    public void solve(int n,int k,String s,StringBuilder op,List<String>list,int prevIdx){
+        if(op.length()==n){
+            list.add(op.toString());
+            return;
+        }
+        
+
+        for(int i=0;i<s.length();i++){//every time start with zero this will help to generate lexicographical string in Recursion itself.
+
+            if(list.size()==k) return;
+
+            if(prevIdx==i) continue;//this helps me to not include the same character adjacent to each other.
+
+            op.append(s.charAt(i));
+
+            solve(n,k,s,op,list,i);//Duplicate Allowed           
+            
+            op.deleteCharAt(op.length()-1);
+        }
+    }
+    public String getHappyString(int n, int k) {
+        String s="abc";
+        List<String> list=new ArrayList<>();
+        StringBuilder sb=new StringBuilder();
+        solve(n,k,s,sb,list,-1);
+
+        
+
+        return k>list.size()?"":list.get(k-1);
+    }
+}
+```
+# Solution:2
+
 ```java
 class Solution {
     //Find all Permutations for a String
