@@ -6,16 +6,9 @@ A mapping of digits to letters (just like on the telephone buttons) is given bel
  
 
 Example 1:
-![img](Given a string s, you can transform every letter individually to be lowercase or uppercase to create another string.
 
-Return a list of all possible strings we could create. Return the output in any order.
+![img](https://assets.leetcode.com/uploads/2022/03/15/1200px-telephone-keypad2svg.png)
 
- 
-
-Example 1:
-
-Input: s = "a1b2"
-Output: ["a1b2","a1B2","A1b2","A1B2"])
 Input: digits = "23"
 
 Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
