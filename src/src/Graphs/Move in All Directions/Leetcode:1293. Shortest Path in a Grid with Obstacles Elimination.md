@@ -5,6 +5,7 @@ Return the minimum number of steps to walk from the upper left corner (0, 0) to 
  
 
 Example 1:
+
 ![img](https://assets.leetcode.com/uploads/2021/09/30/short1-grid.jpg)
 
 Input: grid = [[0,0,0],[1,1,0],[0,0,0],[0,1,1],[0,0,0]], k = 1
