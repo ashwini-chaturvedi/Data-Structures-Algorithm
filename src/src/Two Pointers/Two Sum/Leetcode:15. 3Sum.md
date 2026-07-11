@@ -1,3 +1,4 @@
+Duplicates are there so what not: now Sort the whole array so that duplicate comes together and for each config we will purposely take one of the number and skipp all other.
 ```java
 class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
