@@ -17,6 +17,36 @@ Explanation: The triangle looks like:
 
 The minimum path sum from top to bottom is 2 + 3 + 5 + 1 = 11 (underlined above).
 
+# Recursion+Memoization
+```java
+class Solution {
+
+    public int solve(List<List<Integer>> list, int idx, int jdx, int[][] dp) {
+
+        if (idx == list.size() - 1 ) return list.get(idx).get(jdx);
+
+        if (dp[idx][jdx] != Integer.MAX_VALUE) return dp[idx][jdx];
+
+        int stay = solve(list, idx + 1, jdx, dp);
+        int down = solve(list, idx + 1, jdx + 1, dp);
+
+        return dp[idx][jdx]= list.get(idx).get(jdx) + Math.min(stay, down);
+    }
+
+    public int minimumTotal(List<List<Integer>> triangle) {
+        int m = triangle.size();
+        int[][] dp = new int[201][201];
+
+        for (int[] d : dp) {
+            Arrays.fill(d, Integer.MAX_VALUE);
+        }
+
+        return solve(triangle, 0, 0, dp);
+    }
+}
+```
+
+
 # Bottom-Up
 ```java
 class Solution {
@@ -40,39 +70,6 @@ class Solution {
 
         // The top element of dp contains the minimum path sum
         return dp[0];
-    }
-}
-
-```
-# Recursion+Memoization
-```java
-class Solution {
-
-    public int solve(List<List<Integer>> triangle, int i, int j,int[][] memoiz) {
-        if (i >= triangle.size()) return 0;//if last line of a Triangle then return 0.
-        if (j >= triangle.get(i).size()) return Integer.MAX_VALUE;//If the values of Columns End then return Maximum Value.
-
-        if(memoiz[i][j]!=-1){
-            return memoiz[i][j];
-        }
-
-        //you may move to an adjacent number of the row below. More formally, if you are on index i on the current row, you may move to either index i or index i + 1 on the next row.
-
-        int same = triangle.get(i).get(j) + solve(triangle, i + 1, j,memoiz);//next Row ,Same Column.
-        int plusOne = triangle.get(i).get(j) + solve(triangle, i + 1, j + 1,memoiz);//next Row, next Column.
-
-        return memoiz[i][j]=Math.min(same, plusOne);//Return the minimum of two Options
-    }
-
-    public int minimumTotal(List<List<Integer>> triangle) {
-        if (triangle.size() == 1) return triangle.get(0).get(0);
-
-        int[][] memoiz=new int[201][201];
-
-        for(int[] memo:memoiz){
-            Arrays.fill(memo,-1);
-        }
-        return solve(triangle, 0, 0,memoiz);
     }
 }
 
