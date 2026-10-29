@@ -1,3 +1,47 @@
+# 25-Oct-2026
+```java
+class Solution {
+
+    public boolean isLandLocked(int[][] grid, int i, int j, int[][] directions) {
+       
+
+        boolean ans = true;
+        grid[i][j] = 1;
+
+        for (int[] dir : directions) {
+            int newI = i + dir[0];
+            int newJ = j + dir[1];
+
+            if (newI >= 0 && newI < grid.length && newJ >= 0 && newJ < grid[0].length) {
+                if(grid[newI][newJ] == 0){
+                    ans = ans & isLandLocked(grid, newI, newJ, directions);
+                }
+            }else ans=false;
+        }
+
+        return ans;
+    }
+
+    public int closedIsland(int[][] grid) {
+        int[][] directions = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 } };
+
+        int count = 0;
+
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[0].length; j++) {
+                if (grid[i][j] == 0 && isLandLocked(grid, i, j, directions)) {
+                    count++;
+                }
+            }
+        }
+
+        return count;
+    }
+}
+
+```
+
+# Original
 ```java
 class Solution {
 
